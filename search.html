@@ -23,6 +23,9 @@
   <p id="distance" align="right">Distance is unknown.</p>
 
   <br>
+  <br>
+<button onclick= "reset()">Reset</button>
+<br>
   
   <div class="container">
     <div class="row">
@@ -137,16 +140,15 @@
     }
 
     function reset() {
-      triesCount = 0;
-      animalLocation = Math.round(Math.random() * (23 - 0) + 0);
-      document.getElementById("tries").innerHTML = "Number of triesis zero";
-      distanceOfAnimal = "unknown"
-      document.getElementById("distance").innerHTML = "Distance is " + distanceOfAnimal;
-      for (var i = 0; i <= 23; i++) {
-        document.getElementById(img_array[i]).src = "plant.jpg";
-      }
+                triesCount = 0
+                animalLocation = Math.round(Math.random() * (23 + 0))
+                document.getElementById("tries").innerHTML = "Number of tries is zero"
+                for (var i = 0; i <= 23; i++) {
+                  if(img_array[i] == img_array[animalLocation])
+                        document.getElementById(img_array[i]).src ="plant.jpg"
+                }
 
-    }
+        }
   </script>
 
 
